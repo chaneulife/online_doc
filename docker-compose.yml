@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+
+  yswg_docs:
+    build: 
+      context: .
+    image: yswg/doc
+    container_name: yswg_docs
+    volumes:
+      - ./docs:/docs
+    ports:
+      - '40080:80'
+
+    
+  # vdocs:
+  #  image: nginx:alpine
+  #  ports:
+  #     - '40080:80'
+  #  volumes:
+  #     - ./docs/build/html:/usr/share/nginx/html
